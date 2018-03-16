@@ -71,6 +71,7 @@
 .command-output .container-body {
   background: lightgray;
   border-right: none;
+  overflow-y: auto;
 }
 
 .command-output .container-title {
@@ -116,4 +117,8 @@
 
 .modal-content textarea {
   flex: 1;
+}
+
+.code-output {
+  white-space: pre;
 }

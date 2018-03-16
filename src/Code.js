@@ -8,13 +8,6 @@ class Code extends React.Component {
   editor = null
 
   state = {
-    value: `<html>
-  <head>
-  </head>
-  <body>
-    <h1>Hello world</h1>
-  </body>
-</html>`,
     showModal: false
   }
 
@@ -34,13 +27,18 @@ class Code extends React.Component {
     })
   }
 
-  handleBeforeChange = (editor, data, value) => {
-    this.setState({
-      value
-    })
-  }
+  handleBeforeChange = (editor, data, value) => this.props.onCodeChange(value)
 
-  handleChange = (editor, data, value) => {
+  handleChange = (editor, data, value) => {}
+
+  handleTooltipSave = text => {
+    const cursor = this.editor.getCursor()
+    const pos = `${cursor.line}:${cursor.ch}`
+
+    this.props.onAddCommand({
+      type: 'showTooltip',
+      options: {text, pos}
+    })
   }
 
   render() {
@@ -53,6 +51,7 @@ class Code extends React.Component {
           <TooltipForm
             isOpen={this.state.showModal}
             onRequestClose={this.handleCloseModal}
+            onSave={this.handleTooltipSave}
           />
         </div>
       </div>
@@ -63,7 +62,7 @@ class Code extends React.Component {
     return (
       <CodeMirror
         editorDidMount={editor => {this.editor = editor}}
-        value={this.state.value}
+        value={this.props.code}
         onBeforeChange={this.handleBeforeChange}
         onChange={this.handleChange}
         options={{
