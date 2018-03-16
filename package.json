@@ -4,8 +4,11 @@
   "private": true,
   "homepage": "https://lunochkin.github.io/code-movie-generator",
   "dependencies": {
+    "codemirror": "^5.35.0",
     "react": "^16.2.0",
+    "react-codemirror2": "^4.2.0",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.3.2",
     "react-scripts": "1.1.1"
   },
   "scripts": {

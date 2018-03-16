@@ -76,3 +76,44 @@
 .command-output .container-title {
   border-right: none;
 }
+
+.react-codemirror2, .CodeMirror {
+  height: 100%;
+}
+
+.ReactModalPortal {
+  z-index: 10;
+  position: relative;
+}
+
+.ReactModal__Content {
+  width: 300px;
+  height: 200px;
+  top: 150px !important;
+  left: 80px !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background: lightgray;
+  padding: 10px;
+}
+
+.modal-content {
+  flex: 1;
+  display: flex;
+}
+
+.modal-content textarea {
+  flex: 1;
+}
