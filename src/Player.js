@@ -1,7 +1,7 @@
 import React from 'react'
 import {UnControlled as CodeMirror} from 'react-codemirror2'
 import CodeMirrorEditor from 'codemirror/lib/codemirror'
-import moviePlugin from 'codemirror-movie/lib/movie'
+import moviePlugin from 'codemirror-movie'
 import 'codemirror-movie/lib/movie.css'
 
 
