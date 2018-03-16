@@ -3,6 +3,7 @@ import {UnControlled as CodeMirror} from 'react-codemirror2'
 import CodeMirrorEditor from 'codemirror/lib/codemirror'
 import moviePlugin from 'codemirror-movie'
 import 'codemirror-movie/lib/movie.css'
+import 'codemirror/theme/dracula.css'
 
 
 class Player extends React.Component {
@@ -67,7 +68,7 @@ class Player extends React.Component {
         onChange={this.handleChange}
         options={{
           mode: 'xml',
-          theme: 'material',
+          theme: 'dracula',
           lineNumbers: true
         }}
       />

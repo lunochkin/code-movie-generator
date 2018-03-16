@@ -68,7 +68,7 @@ class Code extends React.Component {
         options={{
           mode: 'xml',
           theme: 'material',
-          lineNumbers: true
+          lineNumbers: false
         }}
       />
     )
